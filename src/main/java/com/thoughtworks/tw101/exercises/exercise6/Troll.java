@@ -1,11 +1,12 @@
 package com.thoughtworks.tw101.exercises.exercise6;
 
 public class Troll implements Monster {
-    private static final String name = "Troll";
+    private String name;
     private int hitPoints;
 
     public Troll() {
         hitPoints = 40;
+        name = "Troll";
     }
 
     @Override

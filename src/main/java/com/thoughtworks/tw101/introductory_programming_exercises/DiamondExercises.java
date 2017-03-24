@@ -13,7 +13,16 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
-
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n*2; j++){
+                if(Math.abs(n-j)<= i){
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
     }
 
 //    Diamond
@@ -24,7 +33,16 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
-
+        for(int i = -n; i < n; i++){
+            for(int j = -n; j < n; j++){
+                if(Math.abs(i) + Math.abs(j) <= n-1){
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
     }
 
 //    Diamond with Name
@@ -36,6 +54,19 @@ public class DiamondExercises {
 //            ***
 //             *
     private static void drawADiamondWithYourName(int n) {
-
+        for(int i = -n; i < n; i++){
+            if(i==0) {
+                System.out.println("Nathan");
+            } else {
+                for (int j = -n; j < n; j++) {
+                    if (Math.abs(i) + Math.abs(j) <= n - 1) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                System.out.println();
+            }
+        }
     }
 }

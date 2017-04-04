@@ -10,7 +10,6 @@ public class Main {
 
         NumberGuessingGame game = new NumberGuessingGame();
         System.out.println("Starting game...");
-        game.init();
         game.startGuessing();
         game.showGuesses();
     }

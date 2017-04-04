@@ -6,11 +6,8 @@ public class NumberGuessingGame {
 
     public NumberGuessingGame() {
         pickRandomNumber = new PickRandomNumber();
-        guessNumber = new GuessNumber();
-    }
-
-    public void init() {
         pickRandomNumber.generate();
+        guessNumber = new GuessNumber();
     }
 
     public void startGuessing() {

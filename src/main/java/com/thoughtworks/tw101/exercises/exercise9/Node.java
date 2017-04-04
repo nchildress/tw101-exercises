@@ -26,22 +26,13 @@ public class Node {
     }
 
     public List<String> names() {
-        List<String> list;
-        if(left != null) list = names(left);
-        else list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
+
+        if(left != null) list.addAll(left.names());
         list.add(name);
-        if(right != null) list.addAll(names(right));
+        if(right != null) list.addAll(right.names());
 
         return list;
     }
 
-    private List<String> names(Node childNode) {
-        List<String> list;
-        if(childNode.left != null) list = names(childNode.left);
-        else list = new ArrayList<>();
-        list.add(childNode.name);
-        if(childNode.right != null) list.addAll(names(childNode.right));
-
-        return list;
-    }
 }
